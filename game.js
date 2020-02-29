@@ -1,6 +1,6 @@
 const getUserChoice=userInput=>{
   userInput = userInput.toLowerCase();
-  if(userInput!=='piatra' && userInput!=='paper' && userInput!=='foarfeca' && userInput!=='bomba'){
+  if(userInput!=='piatra' && userInput!=='hartie' && userInput!=='foarfeca' && userInput!=='bomba'){
      console.log('Corecteaza ce ai scris. Nu imi pot da seama!')   }
   else{
     return userInput;
@@ -14,7 +14,7 @@ const getComputerChoice =()=>{
     case 0:
       return 'piatra';
         case 1:
-      return 'paper';
+      return 'hartie';
         case 2:
       return 'foarfeca';
   }
@@ -28,13 +28,13 @@ const determineWinner=(userChoice,computerChoice)=>{
     return 'Egalitate';
   }
   if (userChoice==='piatra'){
-    if (computerChoice==='paper')
+    if (computerChoice==='hartie')
       {
       return 'Castiga calculatorul';}
 else{
       return 'Castiga utilizatorul';
     }}
- if(userChoice==='paper'){
+ if(userChoice==='hartie'){
    if(computerChoice==='foarfeca'){
       return 'Castiga calculatorul';
  }
