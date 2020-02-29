@@ -1,6 +1,6 @@
 const getUserChoice=userInput=>{
   userInput = userInput.toLowerCase();
-  if(userInput!=='rock' && userInput!=='paper' && userInput!=='scrissors' && userInput!=='bomb'){
+  if(userInput!=='piatra' && userInput!=='paper' && userInput!=='foarfeca' && userInput!=='bomba'){
      console.log('Corecteaza ce ai scris. Nu imi pot da seama!')   }
   else{
     return userInput;
@@ -12,50 +12,50 @@ const getComputerChoice =()=>{
  
   switch(randomNumber){
     case 0:
-      return 'rock';
+      return 'piatra';
         case 1:
       return 'paper';
         case 2:
-      return 'scrissors';
+      return 'foarfeca';
   }
 };
 
 const determineWinner=(userChoice,computerChoice)=>{
-  if(userChoice==='bomb'){
+  if(userChoice==='bomba'){
     return 'Nu mai conteaza...ai castigat oricum!';
   }
   if(userChoice===computerChoice){
-    return 'Tie';
+    return 'Egalitate';
   }
-  if (userChoice==='rock'){
+  if (userChoice==='piatra'){
     if (computerChoice==='paper')
       {
-      return 'Computerul castiga';}
+      return 'Castiga calculatorul';}
 else{
-      return 'Castiga omul';
+      return 'Castiga utilizatorul';
     }}
  if(userChoice==='paper'){
-   if(computerChoice==='scrissors'){
-      return 'Castiga computer';
+   if(computerChoice==='foarfeca'){
+      return 'Castiga calculatorul';
  }
   else
     {
-      return 'Castiga omul 3';
+      return 'Castiga utilizatorul';
     }
  }
-  if(userChoice==='scrissors'){
-    if(computerChoice==='rock')
+  if(userChoice==='foarfeca'){
+    if(computerChoice==='piatra')
     {
-      return 'Castiga android';
+      return 'Castiga calculatorul';
     }
     else {
-      return 'Castiga omul 4';
+      return 'Castiga utilizatorul';
     } 
   }
  };
  
 const playGame=()=>{
-  const userChoice=getUserChoice('bomb');
+  const userChoice=getUserChoice('bomba');
   const computerChoice=getComputerChoice();
   
   console.log(`Tu ai ales:${userChoice} iar PC:${computerChoice}`);   
